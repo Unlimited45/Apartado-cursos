@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registrar</title>
+
+    <!-- link css pagregi-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <header>REGISTRO</header>
+    
+    <div class="form-princ">
+        <form action="#">
+
+            <!--Pagina 1-->
+            <div class="pagina movPag">
+                <div class="titulo">Informacion Principal</div>
+                <div class="campo">
+                    <div class="label">1er Nombre: </div><br>
+                    <input type="text" id="nombre1" placeholder="1er Nombre">
+
+                </div>
+                <div class="campo">
+                    <div class="label">2do Nombre: </div>
+                    <input type="text" id="nombre2" placeholder="2do Nombre">
+
+                </div>
+                <div class="campo">
+                    <div class="label">1er Apellido: </div>
+                    <input type="text" id="apellido1" placeholder="1er Apellido">
+                </div>
+                <div class="campo">
+                    <div class="label">2do apellido: </div>
+                    <input type="text" id="apellido2" placeholder="2do Apellido">
+                </div>
+                <div class="campo">
+                    <div class="label">Tipo Identificacion: </div>
+                    <select id="Tipo_id">
+                        <option value="-1" disabled selected>Escoge una opción</option>
+                        <option value="0">Cedula de ciudadania</option>
+                        <option value="1">Cedula de extranjeria</option>
+                        <option value="2">DNI</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <div class="label">N° Identificacion: </div>
+                    <input type="text" id="ID" placeholder="N° de Identificacion">
+                </div>
+                <div class="campo">
+                    <div class="label">Fcha expedicion documento: </div>
+                    <input type="date" id="fecha_ex_doc">
+                </div>
+                <div class="campo sigPag">
+                    <button>Siguiente</button>
+                </div>
+            </div>
+
+                  <!--Pagina 2-->
+                <div class="pagina">
+                    <div class="titulo">Informacion Secundaria</div>
+                    <div class="campo">
+                        <div class="label">Fecha Nacimiento: </div>
+                        <input type="date" id="fechaNac" max= "2004-12-31" value="2000-09-03">
+    
+                    </div>
+                    <div class="campo">
+                        <div class="label">Sexo: </div>
+                        <select id="Sexo">
+                            <option value="-1" disabled selected>Escoge una opción</option>
+                            <option value="0">Masculino</option>
+                            <option value="1">Femenino</option>
+                            <option value="2">Sin especificar</option>
+                        </select>
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-pag1 volver">Atrás</button>
+                        <button class="adelante-pag3 adelante">Siguiente</button>
+                    </div>
+                </div>
+
+                
+                  <!--Pagina 3-->
+                  <div class="pagina">
+                    <div class="titulo">Informacion de Contacto</div>
+                    <div class="campo">
+                        <div class="label">Correo Electrónico: </div>
+                        <input type="text" id="correo" placeholder="Correo Electrónico">
+    
+                    </div>
+                    <div class="campo">
+                        <div class="label">Número Telefónico: </div>
+                        <input type="text" id="numCel" placeholder="Número Telefónico">
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-pag2 volver">Atrás</button>
+                        <button class="adelante-pag4 adelante">Siguiente</button>
+                    </div>
+                </div>
+
+                 
+                  <!--Pagina 4-->
+                  <div class="pagina">
+                    <div class="titulo">Informacion de Inicio de Sesión</div>
+                    <div class="campo">
+                        <div class="label">Nombre Usuario: </div>
+                        <input type="text" id="usuario" placeholder="Nombre Usuario">
+    
+                    </div>
+                    <div class="campo">
+                        <div class="label">Contraseña: </div>
+                        <input type="password" id="contra" placeholder="Contraseña">
+                        <span class="ojos" onclick="mostrarContra()">
+                            <i id="mostrar" class="fa fa-eye" title="Mostrar Contraseña"></i>
+                            <i id="ocultar" class="fa fa-eye-slash" title="Ocultar Contraseña"></i>
+                        </span>
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-pag3 volver">Atrás</button>
+                        <button class="fin">Registrarse</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+  </div>
+  <script>
+    function mostrarContra(){
+        var x=document.getElementById("contra");
+        var y=document.getElementById("ocultar");
+        var z=document.getElementById("mostrar");
+
+        if(x.type=='password'){
+            x.type="text";
+            y.style.display="block";
+            z.style.display="none";
+        }else{
+            x.type="password";
+            y.style.display="none";
+            z.style.display="block";  
+        }
+    }
+  </script>
+  <script src="js/movimiento.js"></script>
+ 
+
+</body>
+</html>

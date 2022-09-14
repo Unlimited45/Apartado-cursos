@@ -1,0 +1,58 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/validar.js"></script>
+</head>
+<body>
+<!--header-->
+<header class="header">
+    <a href="#" class="logo">
+        <img src="../images/loggoo.png" alt="">
+    </a>
+    <nav class="navbar">
+        <a href="#home">Inicio</a>
+        <a href="#about">Nosotros</a>
+        <a href="#menu">Cursos</a>
+        <a href="#equipo">Nuestro equipo</a>
+        <a href="#review">Opiniones</a>
+    </nav>
+    <div class="<icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+</header>
+<!--header-->
+<section id="pantalla-dividida">
+    <div class="derecha"></div>
+    <div class="izquierda">
+        <form action="validar.php" method="post" class="form-login"">
+            <h2 class="form__titulo">Inicia Sesión</h2>
+            <div class="contenedor-inputs">
+                <input id="id" type="text" name="id" placeholder="&#128100; Identificacion" class="input-100" required>
+                <input id="clave" type="password" name="clave" placeholder="&#128272; Contraseña" class="input-100" required>
+                <br>
+                <input type="submit" value="Iniciar sesion" class="btn-enviar input-100">
+                <p class="form__link">¿No tienes una cuenta? <a class="link" href="#">Registrate</a></p>
+                
+            </div>
+        </form>
+    </div>
+
+</section>
+<!--footer-->
+<section class="footer">
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+    </div>
+</section>
+<!--footer-->
+
+</body>
+</html>

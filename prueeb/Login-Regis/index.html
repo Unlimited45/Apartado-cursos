@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    
+</head>
+<body>
+    
+    <section id="pantalla-dividida">
+        <div class="izquierda"></div>
+        <div class="derecha">
+            <br><br><br><br>
+            <div class="container">
+                <br><br>
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="elegir"></div>
+                            <button type="button" class="toggle-btn" onclick="login()">Inicio Sesión</button>
+                            <button type="button" class="toggle-btn" onclick="registrar()">Registrar</button>
+                    </div>
+                    <div class="redes-sociales">
+                        <img src="img/fac.png" alt="icono_facebook">
+                        <img src="img/tw.png" alt="icono_twitter">
+                        <img src="img/gl.png" alt="icono_google">
+                    </div>
+                    <form id="login" class="input-group">
+                        <input type="number" class="input-field"  placeholder="Identificación" required pattern="[0-9]+" maxlength="11" minlength="11">
+                        <input type="password" class="input-field" placeholder="Contraseña"required>
+                        <input type="checkbox" class="check-box"><span>Recordar Contraseña</span>
+                        <button type="submit" class="submit-btn">Acceder</button>
+                    </form>
+                    <form id="registrar" class="input-group">
+                        <input type="number" class="input-field" placeholder="Identificación" required>
+                        <input type="date" class="input-field" placeholder="fecha de expedición" required>
+                        <input type="text" class="input-field" placeholder="Primer Nombre" required>
+                        <input type="text" class="input-field" placeholder="Segundo Nombre" required>
+                        <input type="text" class="input-field" placeholder="Primer apellido" required>
+                        <input type="text" class="input-field" placeholder="Segundo apellido" required>
+                        <input type="email" class="input-field" placeholder="Correo" required>
+                        <input type="password" class="input-field" placeholder="Contraseña"required>
+                        <input type="checkbox" class="check-box"><span>Acepto los términos y condiciones.</span>
+                        <button type="submit" class="submit-btn">Registrar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+<script>
+    var x= document.getElementById("login");
+    var y= document.getElementById("registrar");
+    var z= document.getElementById("elegir");
+
+    function login(){
+        x.style.left="50px";
+        y.style.left="450px";
+        z.style.left="0px";
+    }
+
+    function registrar(){
+        x.style.left="-400px";
+        y.style.left="50px";
+        z.style.left="120px";
+    }
+    
+</script>
+    
+</body>
+</html>
